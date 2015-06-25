@@ -1,0 +1,25 @@
+/* CSS Document */
+@charset "UTF-8";
+
+body { font-family: Arial; font-size: 12px; }
+
+/* Option 1 */
+
+.chart-area .chart-bar { background-repeat: repeat; }
+.chart-area .chart-bar.judgment    { background-color: none; background-image: url(../images/ie_transparency.png); }
+.chart-area .chart-bar.crucible { background-color: none; background-image: url(../images/ie_transparency.png); }
+.chart-area .chart-bar.vanguard    { background-color: none; background-image: url(../images/ie_transparency.png); }
+.chart-area .chart-bar.deadorbit    { background-color: none; background-image: url(../images/ie_transparency.png); }
+.chart-area .chart-bar.queen     { background-color: none; background-image: url(../images/ie_transparency.png); }
+
+/* Option 2 */
+
+
+/*
+.chart-area .chart-bar.turkey    { background-color: #12473d; }
+.chart-area .chart-bar.pizza { background-color: #12473d; }
+.chart-area .chart-bar.fish    { background-color: #12473d; }
+.chart-area .chart-bar.cheese    { background-color: #12473d; }
+.chart-area .chart-bar.hotdog     { background-color: #12473d; }
+*/
+

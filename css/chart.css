@@ -1,0 +1,54 @@
+/* CSS Document */
+@charset "UTF-8";
+
+body { font-family: Arial; font-size: 12px; }
+
+.chart-container { width: 700px; border: 1px solid #888; margin-left:80px;/*float: right;*/ }
+
+.chart-title {background-color: #444; padding: 5px 0px 10px 15px; margin: 0px; }
+.chart-title h2 { margin: 0px; color: #fff; font-family: Georgia; }
+.chart-title p { margin: 0px; color: #fff; }
+
+.chart-content { height: 340px; position: relative; overflow: hidden; margin: 5px 0px 0px 0px; }
+
+.chart-y-axis { width: 50px; height: 300px; position: absolute; top: 0px; left: 0px; }
+.chart-y-axis p { margin: 0px 0px 0px 10px; padding: 0px 0px 0px 5px; width: 35px; position: absolute; border-bottom: 1px solid #ccc; }
+
+.chart-x-axis { height: 50px; position: absolute; top: 300px; left: 50px; }
+.chart-x-axis p { position: absolute; top: 0px; width: 100px; color: #000; text-align: center; }
+.chart-area {
+	width: 600px;
+	height: 300px;
+	position: absolute;
+	top: 0px;
+	left: 50px;
+	background: #fff url(../images/bg.jpg) no-repeat 0px 0px;
+}
+
+.chart-area .chart-bar {
+	position: absolute;
+	bottom: 0px;
+	width: 50px;
+	height: 0px;
+	-webkit-border-top-left-radius: 10px;
+	-webkit-border-top-right-radius: 10px;
+	-moz-border-radius-topleft: 10px;
+	-moz-border-radius-topright: 10px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	background-repeat: no-repeat;
+	background-position: 50% bottom;
+}
+
+.chart-area .chart-bar.judgment   { background-color: rgba(12,38,32,.6); background-image: url(../images/J.png); }
+.chart-area .chart-bar.crucible { background-color: rgba(134, 14, 14, .6); background-image: url(../images/C.png); }
+.chart-area .chart-bar.vanguard    { background-color: rgba(4,11,83,.6); background-image: url(../images/VG.png); }
+.chart-area .chart-bar.deadorbit   { background-color: rgba(74, 74, 74, .6); background-image: url(../images/DO.png); }
+.chart-area .chart-bar.queen     { background-color: rgba(144,8,152,.6); background-image: url(../images/Q.png); }
+
+
+
+.chart-area .chart-bar p { margin: 5px 0px 0px 0px; text-align: center; color: #fff; display: none; }
+
+
+

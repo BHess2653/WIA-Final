@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>Final Project</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/main.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/interactive_map.css" />
+    <link rel="stylesheet" type="text/css" href="css/chart.css"/>
+    <script type="text/javascript" src="includes/jquery-1.6.1.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+    <script src="http://code.jboxcdn.com/0.3.2/jBox.min.js"></script>
+	<link href="http://code.jboxcdn.com/0.3.2/jBox.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+	<audio id="beep" preload="auto"><source src="audio/tock.mp3" controls></source></audio>
+	<audio id="boop" preload="auto"><source src="audio/click.mp3" controls></source></audio>
+
+	<section class="page-wrap">
+
+		<header> <!-- Defining the header section of the page with the appropriate tag -->
+
+			<div>
+				<h1>Brandon Hess</h1>
+				<p>GT: <a href="https://account.xbox.com/en-US/Profile?gamerTag=GM%20Dahaka">GM Dahaka</a></p>
+			</div>
+
+			<nav> <!-- The nav link semantically marks your main site navigation -->
+				<ul>
+					<li><a href="#block1">Map</a></li>
+					<li><a href="#block2">Chart</a></li>
+					<li><a href="#block3">Graph</a></li>
+					<li><a href="#block4">Video</a></li>
+				</ul>
+			</nav>
+
+		</header>
+
+		<section id="block2" class="module-block">
+
+			<h2>Where i've lived</h2>
+
+			<article id="block1" class="module-block">
+
+		        <div class="map_container">
+
+					<!-- Dots -->
+					<a class="dot" style="top:95px; left:60px;" continent="NA" country="mexico"></a>
+					<a class="dot" style="top:115px; left:89px;" continent="NA" country="brazil"></a>
+					<a class="dot" style="top:90px; left:80px;" continent="NA" country="peru"></a>
+					<a class="dot" style="top:110px; left:395px;" continent="AS" country="china"></a>
+					
+
+					
+					<!-- Form   Blank action goes to same page - not used, because jquery uses this -->
+					<form id="mapForm" name="mapForm" class="form_continent" method="post" action="">
+						<select name="continent" id="continent">
+							<option value="AS">Overseas</option>
+							<!-- <option value="EU">Europe</option> -->
+							<option value="NA">Stateside</option>
+							<!-- <option value="SA">South America</option> -->
+							<option value="ALL" selected="selected">Show all Locations</option>
+						</select>
+					</form>
+
+					<!-- country details -->
+					<div class="detail_container">
+						<!-- country -->
+						<div class="country_detail">
+							<h3>Choose a Location</h3>
+							<p>Click one of the buttons to the left. Learn more about me.</p>
+							<p>You can also sort using the drop-down list!</p>
+						</div>
+		                
+					</div>
+					
+				</div>
+
+
+				<div class="country_detail_container">
+								
+					<!-- country -->
+					<div class="country_detail" id="brazil">
+						<img class="country_photo" src="images/wonders/florida.jpg" alt="Christ Statue" width="75" height="75" />
+						<div class="country_info">
+							<h2>Panama City</h2>
+							<h3>Florida</h3>
+							<p>My sister was born here other than that I dont remeber much about living here.</p>
+						</div>
+		               
+					</div>
+					
+					<!-- country -->
+					<div class="country_detail" id="peru">
+						<img class="country_photo" src="images/wonders/illinois.jpg" alt="Machu Picchu" width="75" height="75" />
+						<div class="country_info">
+							<h2>Amboy</h2>
+							<h3>Illinois</h3>
+							<p>I was born here and this is also where my family lives.</p>
+						</div>
+		                
+					</div>
+					
+							
+					
+					<!-- country -->
+					<div class="country_detail" id="mexico">
+						<img class="country_photo" src="images/wonders/wyoming.jpg" alt="Chichen Itza" width="75" height="75" />
+						<div class="country_info">
+							<h2>Cheyenne</h2>
+							<h3>Wyoming</h3>
+							<p>I lived here for 5-6 Years till I finished elementry then I moved to Okinawa, JP.</p>
+						</div>
+						
+					</div>
+								
+					<!-- country -->
+					<div class="country_detail" id="china">
+						<img class="country_photo" src="images/wonders/okinawa.jpg" alt="Castle" width="75" height="75" />
+						<div class="country_info">
+							<h2>Okinawa</h2>
+							<h3>Japan</h3>
+							<p>I lived here for 8-9 Years on Kadena Air Base. After I finished High school I moved again back to Illinois.</p>
+						</div>
+						
+					</div>
+
+				</div>
+
+			</article>
+
+
+			<h2>Destiny reputation</h2>
+
+			<article class="post">
+
+			<div class="chart-container">
+				<div class="chart-title">
+					<h2>Reputation for each faction</h2>
+					<p>Reputations are based on 2500 XP.</p>
+				</div>
+				<div class="chart-content">
+					<div class="chart-y-axis">
+						<p style="top:0px;">2500</p>
+						<p style="bottom:0px;">0</p>
+					</div>
+					<div class="chart-area" bar-spacing="55">
+						<div bar-value="1000" label="Judgment" class="chart-bar judgment"></div>
+						<div bar-value="1600" label="Crucible" class="chart-bar crucible"></div>
+						<div bar-value="2000" label="Vanguard"   class="chart-bar vanguard"></div>
+						<div bar-value="1400" label="Dead Orbit"   class="chart-bar deadorbit"></div>
+						<div bar-value="800" label="Queen"    class="chart-bar queen"></div>
+					</div>
+					<div class="chart-x-axis"></div>
+				</div>
+			</div>
+
+			</article>
+
+
+			<h2 id="block3">Halo: MCC Legendary Progress</h2>
+
+			<article class="post">	
+			<div id="bar-icon">					
+				<ul class="bar-graph"> 
+				  <li>
+				    <p>Halo</p>
+				    <a class="licon" style="top:14px; left:155px;"></a>
+				    <div class="bar-wrap"><span class="bar-fill" style="width: 20%;"></span></div>
+				  </li> 
+				  <li>
+				    <p>Halo 2</p>
+				    <a class="licon" style="top:70px; left:62px;"></a>
+				    <div class="bar-wrap"><span class="bar-fill" style="width: 10%;"></span></div>
+				  </li> 
+				  <li>
+				    <p>Halo 3 - Completed!</p>
+				    <a class="licon" style="top:128px; left:853px;"></a>
+				    <div class="bar-wrap"><span class="bar-fill"  style="width: 100%;"></span></div>
+				  </li> 
+				  <li>
+				    <p>Halo 4</p>
+				    <a class="licon" style="top:184px; left:239px;"></a>
+				    <div class="bar-wrap"><span class="bar-fill" style="width: 30%;"></span></div>
+				  </li> 
+				</ul>
+			</div>
+			</article>
+
+			<h2 id="block4">Recent News</h2>
+
+			<article class="post">
+				<video src="video/trailer.mp4" controls width="880" height="515" poster="images/poster.png"> 
+					Video is not suported
+				</video>
+				<a href="https://youtu.be/VFh5ArG46_M">Link to Original video</a>
+			</article>
+
+		</section>
+
+	</section><!-- page-wrap -->
+
+	<footer> 
+
+			<section class="page-wrap">
+
+			<h2>Reference</h2>
+
+			<section class="col">
+
+				<h3>Photos</h3>
+
+				<ul>
+					<li><a href="https://drive.google.com/folderview?id=0B-_OY63VAi5aNWRNeC1OM0pyZW8&usp=sharing">Graph Background</a></li>
+					<li><a href="https://www.bungie.net/common/destiny_content/icons/93065f8123884b4597b80962c97113f3.png">Vanguard</a></li>
+					<li><a href="https://www.bungie.net/common/destiny_content/icons/d5b5791e1a47d5e436e9a9653150e06e.png">Dead Orbit</a></li>
+					<li><a href="https://www.bungie.net/common/destiny_content/icons/01f24ce98b85010bf9c6f177500c2714.png">Crucible</a></li>
+					<li><a href="https://www.bungie.net/common/destiny_content/icons/12fe701ca55bcb9032099beaa30192ce.png">Judgment</a></li>
+					<li><a href="https://www.bungie.net/common/destiny_content/icons/b1d8921557060cc223da431ddadeda7d.png">Queen</a></li>
+					<li><a href="https://fresh92.files.wordpress.com/2012/11/legendary.png">Halo Icon</a></li>
+				</ul>
+
+			</section>
+
+			<section class="col">
+
+				<h3>Video</h3>
+
+				<ul>
+					<li><a href="http://all-free-download.com/free-footage/clouds_timelapse_80.html">Background</a></li>
+					<li><a href="https://youtu.be/VFh5ArG46_M">Video</a></li>
+				</ul>
+
+			</section>
+
+			<section class="col">
+
+				<h3>Audio</h3>
+
+				<ul>
+					<li><a href="http://modmyi.com/attachments/forums/iphone-2g-3g-3gs-ipod-touch-1g-2g-3g-new-skins-themes-launches/135101d1227835931-theme-sounds-fallout-3-pipboy-3000-a-fo3sounds.theme.rar">Link</a></li>
+				</ul>
+
+			</section>
+
+		</section>
+
+		
+		<p class="up"><a href="#">Go Up ⇪</a></p>
+		<p>Copyright 2015 - <a href="mailto:">Brandon Hess</a></p>
+
+	</footer>
+
+<video autoplay loop poster="#" id="video-background" muted>
+  <source src="video/clouds.webm" type="video/webm"> <!-- http://beta.mattgrossdesign.com/sites/default/files/wood%20autumn-HD.mp4 -->
+  	Your browser doesn't support HTML5 video.
+</video>
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src='http://codepen.io/assets/libs/fullpage/jquery.js'></script>
+  <script type="text/javascript" src="js/interactive_map.js"></script>
+  <script type="text/javascript" src="js/chart.js"></script>
+  <script src="js/index.js"></script>
+  <script>
+		$("a").each(function(i) {if (i != 0) { 
+      		$("#beep")
+        	.clone()
+        	.attr("id", "beep" + i)
+        	.appendTo($(this).parent()); 
+    	}
+    		$(this).data("beeper", i);
+  		})
+  			.mouseenter(function() {
+    		$("#beep" + $(this).data("beeper"))[0].play();
+  		});
+			$("#beep").attr("id", "beep0");
+
+		$( document ).ready(function() {
+			var audio = $("#boop")[0];
+			$("a").mousedown(function() {
+			  audio.play();
+			});
+		});
+
+// onclick="new jBox('Notice', { content: 'Hurray! A notice!' });"
+  </script>
+
+</body>
+
+</html>
